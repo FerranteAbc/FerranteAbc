@@ -15,6 +15,7 @@ Todos os testes foram feitos em laboratório próprio, em ambiente de homologaç
 | Repositório | O que é |
 | :--- | :--- |
 | [Cyber-Defense-Project](https://github.com/FerranteAbc/Cyber-Defense-Project) | Avaliação de segurança de uma aplicação web em homologação (FIAP Challenge 2026): 4 achados classificados em CVSS v3.1, plano de correção e critério de reteste. |
+| [Global-Solution-CTF-Forense-DFIR](https://github.com/FerranteAbc/Global-Solution-CTF-Forense-DFIR) | CTF Global Solution FIAP (3º semestre): 15 desafios de forense digital e resposta a incidentes, com logs Sysmon, memória (Volatility 3), disco ext2/ext3 e NTFS e imagens AD1. |
 | [FIAP-CTF-Write-ups-Solu-es-de-Ciberseguran-a](https://github.com/FerranteAbc/FIAP-CTF-Write-ups-Solu-es-de-Ciberseguran-a) | CTF Trilha 1 (9 desafios de OSINT, threat intelligence e forense de redes, com mapeamento para MITRE ATT&CK), Wargames 2TDCOR (20 desafios de pentest, protocolos e forense) e laboratório com Kali Linux e Metasploitable 2. |
 | [Global-Solution-CTF-Wargames](https://github.com/FerranteAbc/Global-Solution-CTF-Wargames) | CTF Global Solution FIAP: 15 desafios resolvidos, com um write-up por desafio (forense de rede, firmware, análise de scripts, criptografia e esteganografia). |
 | [Firmware-Reversing-IoT-Security-Forensics](https://github.com/FerranteAbc/Firmware-Reversing-IoT-Security-Forensics) | Segurança IoT e engenharia reversa de firmware com OWASP IoTGoat: 8 desafios de auditoria embarcada e forense digital. |
@@ -22,8 +23,8 @@ Todos os testes foram feitos em laboratório próprio, em ambiente de homologaç
 
 ## Foco em blue team
 
-- **Detecção:** triagem de logs de autenticação, de acesso web e de eventos do Windows (`.evtx`) para achar força bruta, varreduras automatizadas e movimentação lateral. Snort e Suricata em laboratório.
-- **Análise e forense:** inspeção de pacotes com Wireshark e tshark (exfiltração por DNS e HTTP POST, C2, Evil Twin em 802.11), perícia de e-mail (SPF, DKIM e DMARC) e de arquivos.
+- **Detecção:** triagem de logs de autenticação, de acesso web e de eventos do Windows (`.evtx`, incluindo Sysmon) para achar força bruta, varreduras automatizadas e movimentação lateral. Snort e Suricata em laboratório.
+- **Análise e forense:** inspeção de pacotes com Wireshark e tshark (exfiltração por DNS e HTTP POST, C2, Evil Twin em 802.11), perícia de e-mail (SPF, DKIM e DMARC) e de arquivos, forense de disco (ext2/ext3 e NTFS) e de memória com Volatility 3.
 - **Threat intelligence:** IoCs até as TTPs (Pirâmide da Dor), mapeamento para MITRE ATT&CK e leitura de intrusões pela Cyber Kill Chain.
 - **Contenção e hardening:** cada achado com prioridade, correção e critério de reteste.
 
@@ -37,4 +38,4 @@ grep "Failed password" /var/log/auth.log \
 
 ## Ferramentas
 
-Wireshark, tshark, tcpdump, Snort, Suricata, Nmap, Gobuster, Dirsearch, Nikto, Metasploit, Hydra, John the Ripper, binwalk, CyberChef, ExifTool, Python, Bash, PowerShell e Git.
+Wireshark, tshark, tcpdump, Snort, Suricata, Sysmon, Volatility 3, The Sleuth Kit, Nmap, Gobuster, Dirsearch, Nikto, Metasploit, Hydra, John the Ripper, binwalk, CyberChef, ExifTool, Python, Bash, PowerShell e Git.
